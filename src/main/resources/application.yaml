@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: ConnectAPI
+
+server:
+  port: 8080
+
+# Configurações próprias da ConnectAPI
+connectapi:
+  viacep:
+    base-url: https://viacep.com.br/ws
+  open-meteo:
+    geocoding-url: https://geocoding-api.open-meteo.com/v1
+    forecast-url: https://api.open-meteo.com/v1
+  http:
+    # Tempo máximo para abrir a conexão com o serviço externo
+    connect-timeout: 3s
+    # Tempo máximo esperando a resposta depois de conectado
+    read-timeout: 5s
